@@ -1,0 +1,65 @@
+O seu código já está bastante funcional e bem estruturado. A lógica do carrossel com botões e a transição entre os passos está correta.
+
+Para melhorar e deixar seu código mais completo, sugiro algumas alterações e adições:
+
+Melhorias no styles.css
+Adicionar um efeito de transição para que a mudança de tela não seja brusca e para o carrossel parecer mais suave. Você também pode melhorar a aparência dos botões e do main.
+
+CSS
+
+body {
+    background-color: #1D4221;
+    color: white;
+    font-family: "Bai Jamjuree", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Use 100vh para ocupar a altura total da tela */
+    margin: 0;
+}
+
+main {
+    text-align: center;
+    max-width: 90%;
+    /* Adicionando um pouco de padding e borda arredondada para destacar */
+    background-color: #2b5c32; /* Uma cor de fundo um pouco diferente */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+}
+
+.passo {
+    display: none;
+    /* Transição para suavizar a entrada e saída do passo */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.passo.ativo {
+    display: block;
+    opacity: 1;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Arredondar as bordas das imagens */
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #64A712;
+    color: white;
+    font-family: "Bai Jamjuree", sans-serif;
+    border: none;
+    padding: 1rem 2rem; /* Aumentar o padding para o botão ser maior */
+    margin: 0.5rem; /* Separar os botões */
+    border-radius: 50px; /* Deixar os botões redondos */
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Transição para o efeito de hover */
+}
+
+button:hover {
+    background-color: #538c0e; /* Cor mais escura ao passar o mouse */
+}
